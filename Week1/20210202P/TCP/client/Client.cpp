@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-
 #include <stdlib.h>
+
 #include <Winsock2.h>
 #include <WS2tcpip.h>
 
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
 
     while (1) {
         printf("Send to server: ");
-        gets_s(buff, BUFF_SIZE);
+        fgets(buff, BUFF_SIZE, stdin);
         messageLen = strlen(buff);
 
         if (messageLen == 0) break;
